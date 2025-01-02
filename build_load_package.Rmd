@@ -1,0 +1,41 @@
+---
+title: "Erstellung des 'steamr' Packages"
+output: html_document
+---
+
+```{r}
+# unload dev package
+detach("package:steamr", unload = TRUE)
+
+```
+
+```{r}
+library(devtools)
+library(utils)
+```
+
+```{r}
+# make roxygen2 include dependencies into NAMESPACE
+# use_package("dplyr")
+# use_package("tidyr")
+# use_package("ggplot2")
+
+# see https://stackoverflow.com/questions/22565024/how-to-properly-include-dependencies-in-r-package
+```
+
+```{r}
+devtools::test(".")
+```
+
+```{r}
+devtools::document(".")
+```
+
+```{r}
+devtools::build(".")
+```
+
+```{r}
+# Load package
+devtools::load_all()
+```

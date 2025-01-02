@@ -1,13 +1,23 @@
 Package: steamr
-Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9000
+Title: Visualising and processing video game data from steam
+Version: 0.1.0
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
+    {person("Maximilian", "Kühn", , "3009677@stud.hs-mannheim.de", role = c("aut", "cre"));
+    person("Cedric", "Mingham", , "2021650@stud.hs-mannheim.de", role = c("aut", "cre"));
+    person("Katharina", "Salewski", , "1911459@stud.hs-mannheim.de", role = c("aut", "cre"))}
+Description: TODO expand with function information: This package can take data from the steam api (as a dataframe) and offers several ways of processing this data.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
+Imports:
+    dplyr,
+    tidyr,
+    ggplot2,
+    stringr
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
+Depends: 
+    R (>= 3.5)
+LazyData: true

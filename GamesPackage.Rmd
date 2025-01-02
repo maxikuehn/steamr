@@ -1,0 +1,17 @@
+---
+title: "Erstellung des 'steamr' Packages"
+output: html_document
+---
+
+```{r}
+library(devtools)
+library(utils)
+```
+
+```{r}
+devtools::document(".")
+```
+
+```{r}
+devtools::build(".")
+```
