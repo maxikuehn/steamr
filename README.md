@@ -4,6 +4,8 @@
 # steamr
 
 <!-- badges: start -->
+
+[![R-CMD-check](https://github.com/maxikuehn/steamr/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/maxikuehn/steamr/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 The goal of steamr is to visualize and process video game data from
