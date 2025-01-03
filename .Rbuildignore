@@ -7,3 +7,5 @@
 ^_pkgdown\.yml$
 ^docs$
 ^pkgdown$
+^build_load_package\.Rmd$
+^GamesPackage\.Rmd$
