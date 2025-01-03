@@ -9,7 +9,7 @@ If the string s is a non-array sequence, the sequence is returned as a single el
 str_arr_to_vector(s)
 }
 \arguments{
-\item{s}{a string containing an array like \link{'A', 'B'}}
+\item{s}{a string containing an array like ['A', 'B']}
 }
 \value{
 spl The vector of elements

@@ -14,7 +14,7 @@ addyear <- function(games) {
 #' Function to manually parse a serialized str array into a R vector.
 #' If the array has no (valid) elements, NULL is returned.
 #' If the string s is a non-array sequence, the sequence is returned as a single element
-#' @param s a string containing an array like ['A', 'B']
+#' @param s a string containing an array like \['A', 'B'\]
 #' @return spl The vector of elements
 #' @import dplyr
 #' @import stringr
@@ -71,6 +71,6 @@ avgpriceperyear <- function(games, selectedgenres = NULL) {
   }
   priceperyear <- ggplot(games, aes(year, mean_price, colour = genres)) +
     geom_line() +
-    labs(x = "Year", y = "Average price in €", title = "Average price evolution per Genre")
+    labs(x = "Year", y = "Average price in \u20ac", title = "Average price evolution per Genre") # \u20ac is Euro in Unicode escape
   return(priceperyear)
 }
