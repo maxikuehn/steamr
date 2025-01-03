@@ -7,7 +7,7 @@ Authors@R:
     person("Katharina", "Salewski", , "1911459@stud.hs-mannheim.de", role = c("aut", "cre"))}
 Description: TODO expand with function information: This package can take data from the steam api (as a dataframe) and offers several ways of processing this data.
 License: MIT + file LICENSE
-URL: https://github.com/maxikuehn/steamr
+URL: https://github.com/maxikuehn/steamr, https://maxikuehn.github.io/steamr/
 BugReports: https://github.com/maxikuehn/steamr/issues
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
