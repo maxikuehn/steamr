@@ -19,3 +19,4 @@ Function to manually parse a serialized str array into a R vector.
 If the array has no (valid) elements, NULL is returned.
 If the string s is a non-array sequence, the sequence is returned as a single element
 }
+\keyword{internal}

@@ -2,8 +2,9 @@
 
 #' Function to analyse date column in the dataset and add a column containing only the year
 #' @param games The "games" dataset
-#' @return games The "games" dataset with an added column "year"
+#' @return The "games" dataset with an added column "year"
 #' @import dplyr
+#' @keywords internal
 addyear <- function(games) {
   games$release_date <- as.Date(games$release_date, "%Y-%m-%d")
   games <- games |>
@@ -18,6 +19,7 @@ addyear <- function(games) {
 #' @return spl The vector of elements
 #' @import dplyr
 #' @import stringr
+#' @keywords internal
 str_arr_to_vector <- function(s) {
   if (length(s) == 0) {
     return(NULL)
@@ -35,6 +37,7 @@ str_arr_to_vector <- function(s) {
 #' @return games The "games" dataset with rows separated by genres
 #' @import dplyr
 #' @import tidyr
+#' @keywords internal
 separatebygenre <- function(games) {
   games <- games |> # TODO call by ref ueberschreibt schon variable oder lokal?
     rowwise() |>

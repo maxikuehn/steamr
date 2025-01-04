@@ -10,8 +10,9 @@ addyear(games)
 \item{games}{The "games" dataset}
 }
 \value{
-games The "games" dataset with an added column "year"
+The "games" dataset with an added column "year"
 }
 \description{
 Function to analyse date column in the dataset and add a column containing only the year
 }
+\keyword{internal}
