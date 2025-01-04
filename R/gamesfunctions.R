@@ -49,6 +49,8 @@ separatebygenre <- function(games) {
 #' @param games The "games" dataset
 #' @param selectedgenres Vector of genres to be visualised, OPTIONAL (all genres are selected if this parameter is not provided)
 #' @return avgpriceplot a ggplot object
+#' @examples
+#' avgpriceperyear(games, selectedgenres = c("Action", "Indie", "Simulation"))
 #' @export
 avgpriceperyear <- function(games, selectedgenres = NULL) {
   games <- separatebygenre(addyear(games))

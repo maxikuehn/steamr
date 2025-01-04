@@ -19,3 +19,6 @@ avgpriceplot a ggplot object
 Function to visualise the average game price per year
 Genres include: Action, Adventure, Casual, Indie, MassivelyMultiplayer, Racing, RPG, Simulation, Sports, Strategy
 }
+\examples{
+avgpriceperyear(games, selectedgenres = c("Action", "Indie", "Simulation"))
+}
