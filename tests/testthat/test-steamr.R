@@ -1,5 +1,3 @@
-# context("steamr") # deprecated
-
 # Test that string array parsing works as expected
 test_that("parse array one element", {
   t <- str_arr_to_vector("['Genre']")
