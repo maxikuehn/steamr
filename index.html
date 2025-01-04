@@ -50,11 +50,12 @@
 </h1></div>
 <!-- badges: start -->
 
-<p>The goal of steamr is to visualize and process video game data from steam.</p>
+<!-- badges: end -->
+<p>The goal of <em>steamr</em> is to visualize and process video game data from steam.</p>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
-<p>You can install the development version of steamr from <a href="https://github.com/" class="external-link">GitHub</a> with:</p>
+<p>You can install the development version of steamr from <a href="https://github.com/maxikuehn/steamr" class="external-link">GitHub</a> with:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># install.packages("pak")</span></span>
 <span><span class="fu">pak</span><span class="fu">::</span><span class="fu"><a href="https://pak.r-lib.org/reference/pak.html" class="external-link">pak</a></span><span class="op">(</span><span class="st">"maxikuehn/steamr"</span><span class="op">)</span></span></code></pre></div>
@@ -62,24 +63,37 @@
 <div class="section level2">
 <h2 id="example">Example<a class="anchor" aria-label="anchor" href="#example"></a>
 </h2>
-<p>This is a basic example which shows you how to solve a common problem:</p>
+<p>This is a basic example which shows you how you can access the games dataset:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/maxikuehn/steamr" class="external-link">steamr</a></span><span class="op">)</span></span>
-<span><span class="co">## basic example code</span></span></code></pre></div>
-<p>What is special about using <code>README.Rmd</code> instead of just <code>README.md</code>? You can include R chunks like so:</p>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">games</span><span class="op">[</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"app_id"</span>, <span class="st">"name"</span>, <span class="st">"price"</span>, <span class="st">"metacritic"</span><span class="op">)</span><span class="op">]</span><span class="op">)</span></span>
+<span><span class="co">#&gt;    app_id                                    name price metacritic</span></span>
+<span><span class="co">#&gt; 1   22670                  Alien Breed 3: Descent  9.99         64</span></span>
+<span><span class="co">#&gt; 2  231330                     Deadfall Adventures 19.99         53</span></span>
+<span><span class="co">#&gt; 3  897820                 Reigns: Game of Thrones  3.99         84</span></span>
+<span><span class="co">#&gt; 4  457140                     Oxygen Not Included 22.99         85</span></span>
+<span><span class="co">#&gt; 5 1345820                               Ragnarock 21.99         87</span></span>
+<span><span class="co">#&gt; 6    7940 Call of Duty® 4: Modern Warfare® (2007) 19.99         92</span></span></code></pre></div>
+<p>The exported function <code>avgpriceperyear</code> makes it easy to visualize the average price of game genres each year.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="va">cars</span><span class="op">)</span></span>
-<span><span class="co">#&gt;      speed           dist       </span></span>
-<span><span class="co">#&gt;  Min.   : 4.0   Min.   :  2.00  </span></span>
-<span><span class="co">#&gt;  1st Qu.:12.0   1st Qu.: 26.00  </span></span>
-<span><span class="co">#&gt;  Median :15.0   Median : 36.00  </span></span>
-<span><span class="co">#&gt;  Mean   :15.4   Mean   : 42.98  </span></span>
-<span><span class="co">#&gt;  3rd Qu.:19.0   3rd Qu.: 56.00  </span></span>
-<span><span class="co">#&gt;  Max.   :25.0   Max.   :120.00</span></span></code></pre></div>
-<p>You’ll still need to render <code>README.Rmd</code> regularly, to keep <code>README.md</code> up-to-date. <code>devtools::build_readme()</code> is handy for this.</p>
-<p>You can also embed plots, for example:</p>
-<p><img src="reference/figures/README-pressure-1.png" width="100%"></p>
-<p>In that case, don’t forget to commit and push the resulting figure files, so they display on GitHub and CRAN.</p>
+<code class="sourceCode R"><span><span class="fu"><a href="reference/avgpriceperyear.html">avgpriceperyear</a></span><span class="op">(</span><span class="va">games</span>, selectedgenres <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Action"</span>, <span class="st">"Indie"</span>, <span class="st">"Simulation"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<p><img src="reference/figures/README-games-1.png" width="100%"></p>
+<p>You can also create a S3 Object of a specific game:</p>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">g</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/get_game_details.html">get_game_details</a></span><span class="op">(</span><span class="fl">72850</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">g</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Game Details:</span></span>
+<span><span class="co">#&gt; app_id: 72850</span></span>
+<span><span class="co">#&gt; name: The Elder Scrolls V: Skyrim</span></span>
+<span><span class="co">#&gt; description: EPIC FANTASY REBORN The next chapter in the highly anticipated Elder Scrolls saga arrives from the makers of the 2006 and 2008 Games of the Year, Bethesda Game Studios. Skyrim reimagines and revolutionizes the open-world fantasy epic, bringing to life a complete virtual world open for you to explore any way you choose.</span></span>
+<span><span class="co">#&gt; image: https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/72850/header.jpg?t=1721923139</span></span>
+<span><span class="co">#&gt; developers: ['Bethesda Game Studios']</span></span>
+<span><span class="co">#&gt; publishers: ['Bethesda Softworks']</span></span>
+<span><span class="co">#&gt; price: 14.99</span></span>
+<span><span class="co">#&gt; metacritic: 94</span></span>
+<span><span class="co">#&gt; genres: ['RPG']</span></span>
+<span><span class="co">#&gt; recommendations: 181044</span></span>
+<span><span class="co">#&gt; release_date: 2011-11-10</span></span></code></pre></div>
 </div>
 </div>
   </main><aside class="col-md-3"><div class="links">
