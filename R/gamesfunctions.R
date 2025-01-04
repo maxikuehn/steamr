@@ -69,6 +69,6 @@ avgpriceperyear <- function(games, selectedgenres = NULL) {
   }
   priceperyear <- ggplot(games, aes(year, mean_price, colour = genres)) +
     geom_line() +
-    labs(x = "Year", y = "Average price in \u20ac", title = "Average price evolution per Genre") # \u20ac is Euro in Unicode escape
+    labs(x = "Year", y = "Average price in EUR", title = "Average price evolution per Genre")
   return(priceperyear)
 }
