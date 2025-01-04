@@ -3,34 +3,31 @@
 \docType{data}
 \name{games}
 \alias{games}
-\title{Steam Game Details}
+\title{Steam Game Data}
 \format{
-\subsection{\code{games}}{
-
-A data frame with 500 rows and 11 columns:
+A data frame with 500 rows and 11 variables:
 \describe{
-\item{app_id}{Steam App ID}
-\item{name}{Name of the game}
-\item{description}{Short description of the game}
+\item{app_id}{Unique Steam ID}
+\item{name}{Game name}
+\item{description}{Short game description}
 \item{image}{Image URL}
-\item{developers}{Developers of the game}
-\item{publishers}{Publishers of the game}
-\item{price}{Price of the game in EUR}
+\item{developers, publishers}{Game developers and publishers}
+\item{price}{Price in EUR}
 \item{metacritic}{Metacritic score}
-\item{genres}{Genres of the game}
+\item{genres}{Game genres (comma-separated)}
 \item{recommendations}{Number of recommendations}
-\item{release_date}{Release date of the game}
-}
+\item{release_date}{Game release date}
 }
 }
 \source{
 Huggingface: \href{https://huggingface.co/datasets/FronkonGames/steam-games-dataset}{FronkonGames/steam-games-dataset}
-and Steam API \url{https://store.steampowered.com/api/appdetails?appids=AppID}
+
+Steam API \url{https://store.steampowered.com/api/appdetails?appids=AppID}
 }
 \usage{
 games
 }
 \description{
-A subset of Game Details from the Steam API
+Subset of game details from the Steam API and Huggingface dataset.
 }
 \keyword{datasets}
