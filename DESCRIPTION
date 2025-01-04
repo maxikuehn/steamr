@@ -1,12 +1,16 @@
 Package: steamr
-Title: Visualising and processing video game data from steam
+Title: Steam Game Data Analysis
 Version: 0.1.0
 Authors@R: c(
     person("Maximilian", "Kühn", , "3009677@stud.hs-mannheim.de", role = c("aut", "cre")),
     person("Cedric", "Mingham", , "2021650@stud.hs-mannheim.de", role = c("aut")),
     person("Katharina", "Salewski", , "1911459@stud.hs-mannheim.de", role = c("aut"))
     )
-Description: TODO expand with function information: This package can take data from the steam api (as a dataframe) and offers several ways of processing this data.
+Description: This package provides functions for analyzing and visualizing Steam
+    game data. It allows users to explore various aspects of Steam games, 
+    including prices, genres, and other details. The package includes 
+    functionality to manipulate and clean game data and visualize trends in
+    pricing across different genres.
 License: MIT + file LICENSE
 URL: https://github.com/maxikuehn/steamr, https://maxikuehn.github.io/steamr/
 BugReports: https://github.com/maxikuehn/steamr/issues

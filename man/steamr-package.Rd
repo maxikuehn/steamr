@@ -4,9 +4,9 @@
 \name{steamr-package}
 \alias{steamr}
 \alias{steamr-package}
-\title{steamr: Visualising and processing video game data from steam}
+\title{steamr: Steam Game Data Analysis}
 \description{
-TODO expand with function information: This package can take data from the steam api (as a dataframe) and offers several ways of processing this data.
+This package provides functions for analyzing and visualizing Steam game data. It allows users to explore various aspects of Steam games, including prices, genres, and other details. The package includes functionality to manipulate and clean game data and visualize trends in pricing across different genres.
 }
 \seealso{
 Useful links:
