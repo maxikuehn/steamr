@@ -22,7 +22,7 @@ A data frame with 500 rows and 11 variables:
 \source{
 Huggingface: \href{https://huggingface.co/datasets/FronkonGames/steam-games-dataset}{FronkonGames/steam-games-dataset}
 
-Steam API \url{https://store.steampowered.com/api/appdetails?appids=AppID}
+Steam API: \url{https://store.steampowered.com/api/appdetails?appids=AppID}
 }
 \usage{
 games
