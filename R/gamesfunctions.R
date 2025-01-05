@@ -34,7 +34,7 @@ str_arr_to_vector <- function(s) {
 #' @return games The "games" dataset with rows separated by genres
 #' @keywords internal
 separatebygenre <- function(games) {
-  games <- games |> # TODO call by ref ueberschreibt schon variable oder lokal?
+  games <- games |>
     rowwise() |>
     mutate(genres = list(str_arr_to_vector(genres))) |>
     unnest_longer(genres) |>
